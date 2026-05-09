@@ -15,9 +15,6 @@ HEADERS = {
 
 def setup_driver():
     options = webdriver.ChromeOptions()
-
-    #options.add_argument("--headless") #chạy ngầm k cần giao diện
-    #options.add_argument("--window-size=1920,1080")#kích thước màn hình
     options.page_load_strategy = 'eager' #hạn chế tải hình ảnh, ads trên web
 
     #Tắt load hình ảnh, CSS, và popup mặc định
@@ -33,7 +30,7 @@ def setup_driver():
     options.add_argument("--no-sandbox")
     options.add_argument("--disable-dev-shm-usage")
 
-    driver = webdriver.Chrome(options = options) #gọi Chrome để dùng
+    driver = webdriver.Chrome(options = options) #gọi Chrome
 
     return driver
 
@@ -41,41 +38,33 @@ def load_full_page(driver, url):
     driver.get(url)
     time.sleep(3)
 
-    #click_count = 0
     while True:
+        #tắt pop-up quảng cáo, v.v...
         try:
-            # Dùng find_elements (trả về danh sách) thay vì find_element. 
-            # Nếu không có popup, nó trả về mảng rỗng [], code không bị văng lỗi.
             close_buttons = driver.find_elements(By.CSS_SELECTOR, "button.cancel-button-top")
         
             if len(close_buttons) > 0 and close_buttons[0].is_displayed():
                 driver.execute_script("arguments[0].click();", close_buttons[0])
-                print("Đã dọn dẹp popup cản đường!")
-                time.sleep(1) # Nghỉ 1 giây để hiệu ứng ẩn popup chạy xong
+                print("Đã tắt pop-up!")
+                time.sleep(1)
         except Exception:
-            pass # Lỗi vặt khi tắt popup thì kệ nó, đi tiếp
-    # ----------------------------------
+            pass 
+        #Load more
         try:
-            #Tìm nút xem thêm trong 2s
             button = WebDriverWait(driver, 2).until(
                 EC.element_to_be_clickable((By.XPATH, "//button[contains(., 'Xem thêm')]"))
             )
 
-            #Cuộn đến nút "Xem thêm"
             driver.execute_script("arguments[0].scrollIntoView({block: 'center'})", button)
             time.sleep(1)
 
-            #Nhấn nút "Xem thêm"
             driver.execute_script("arguments[0].click()", button)
-            #click_count += 1
             time.sleep(1)
 
-        #Hết nút "Xem thêm"
         except TimeoutException:
             break
 
-    html_source = driver.page_source #Tất cả html của trang
-    #driver.quit() #tắt Chrome
+    html_source = driver.page_source
     return html_source
 
 def get_product(html_source):
@@ -97,7 +86,6 @@ def get_product(html_source):
         Price_tag = card.find("p", class_ = lambda c : c and "b1-semibold" in c)
         Price = Price_tag.text.strip() if Price_tag else np.nan
 
-        #Khởi tạo các biến thông số
         products.append({
             "name": Name,
             "price": Price,

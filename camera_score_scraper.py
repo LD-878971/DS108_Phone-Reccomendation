@@ -16,10 +16,7 @@ HEADERS = {
 def setup_driver():
     options = webdriver.ChromeOptions()
 
-    #options.add_argument("--headless") #chạy ngầm k cần giao diện
-    #options.add_argument("--window-size=1920,1080")#kích thước màn hình
     options.page_load_strategy = 'eager' #hạn chế tải hình ảnh, ads trên web
-
     #Tắt load hình ảnh, CSS, và popup mặc định
     prefs = {
         "profile.managed_default_content_settings.images": 2,
@@ -76,13 +73,10 @@ def scrape(html_source):
             for tag in score_tags:
                 text = tag.text.strip()
                 
-                # Bỏ qua các thẻ rỗng
                 if text == "":
                     continue
-                    
                 if tag.has_attr('class') and 'devicePrice' in tag['class']:
                     continue
-                    
                 if tag.has_attr('class') and 'deviceDate' in tag['class']:
                     continue
 
