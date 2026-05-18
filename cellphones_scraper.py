@@ -78,13 +78,56 @@ def get_products(html_src):
 
         h3_name = name_tag.find("h3")
         name = h3_name.text.strip() 
-        price = price_tag.text.strip()if (price_tag.text.strip() and "liên hệ" not in price_tag.text.strip().lower()) else None
+        price = price_tag.text.strip() if (price_tag.text.strip() and "liên hệ" not in price_tag.text.strip().lower()) else None
 
+        link_tag = container.find("a")
+        link = link_tag["href"]
         products.append({
-            "name": name,
-            "price": price
+            "Name": name,
+            "Price": price,
+            "Link": link
         })
 
+    return products
+
+def get_product_spec(driver, products):
+#     specs_needs = {
+#     "Kích thước màn hình": "Screen_size",
+#     "Dung lượng RAM": "RAM",
+#     "Bộ nhớ trong": "ROM",
+#     "Pin": "Battery",
+#     "Chipset": "Chipset",
+#     "Camera sau": "Back_camera",
+#     "Camera trước": "Front_camera"
+# }
+    
+    for product in products:
+        link = product['Link'] 
+        try:
+            driver.get(link)
+            time.sleep(1)
+            try:
+                button = WebDriverWait(driver, 3).until(
+                    EC.element_to_be_clickable((By.XPATH, "//button[contains(., 'Xem tất cả')]"))
+                )
+                driver.execute_script("arguments[0].click()", button)
+                time.sleep(1)
+            except TimeoutException:
+                pass
+
+            soup_spec = BeautifulSoup(driver.page_source, "html.parser")
+
+            spec_container = soup_spec.find_all("tr", class_ = "technical-content-item")
+            for spec in spec_container:
+                td = spec.find_all("td")
+                td_text = td[0].text.strip()
+                td_spec = td[1].text.strip()
+                product[td_text] = td_spec
+
+            print("Da crawl!")
+        except Exception:
+            print("Link ERROR!")
+        
     return products
 
 def save_to_csv(data, name):
@@ -96,6 +139,7 @@ def main():
     driver = setup_driver()
     html_src = load_full_page(driver, url)
     products = get_products(html_src)
+    detail_products = get_product_spec(driver, products)
     driver.quit()
 
     save_to_csv(products, "cellphones_raw")

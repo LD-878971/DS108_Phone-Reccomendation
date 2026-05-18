@@ -30,17 +30,25 @@ def scrape(driver, url):
 
         rows = soup.find_all("tr")
 
+        # for row in rows:
+        #     cols = row.find_all("td")
+        #     if len(cols) >= 3:
+        #         name = cols[1].text.strip()
+        #         score = cols[2].text.strip()
         for row in rows:
-            cols = row.find_all("td")
-            if len(cols) >= 3:
-                name = cols[1].text.strip()
-                score = cols[2].text.strip()
+            td = row.find_all("td")
+            if len(td) >= 7:
+                name = td[1].find('a').text.strip()
+                score = td[3].text.strip()
+                clock = td[6].text.strip()
+                gpu = td[7].text.strip()
 
-                if name and score:
-                    data.append({
-                        "name": name,
-                        "Antutu_Score": score
-                    })
+                data.append({
+                    "Chipset": name,
+                    "Antutu 11": score,
+                    "Clock": clock,
+                    "GPU": gpu
+                })
 
         try:
             next_button = WebDriverWait(driver, 1).until(
@@ -57,13 +65,13 @@ def scrape(driver, url):
     return data
 
 def main():
-    url = "https://nanoreview.net/en/phone-list/antutu-rating"
+    url = "https://nanoreview.net/en/soc-list/rating"
     driver = setup_driver()
 
     antutu_score = scrape(driver, url)
 
     df = pd.DataFrame(antutu_score)
-    df.to_csv("antutu_score.csv", index = False)
+    df.to_csv("antutu_score_socket.csv", index = False)
 
     driver.quit()
 
