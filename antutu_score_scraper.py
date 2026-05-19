@@ -29,12 +29,6 @@ def scrape(driver, url):
         soup = BeautifulSoup(html_src, "html.parser")
 
         rows = soup.find_all("tr")
-
-        # for row in rows:
-        #     cols = row.find_all("td")
-        #     if len(cols) >= 3:
-        #         name = cols[1].text.strip()
-        #         score = cols[2].text.strip()
         for row in rows:
             td = row.find_all("td")
             if len(td) >= 7:
@@ -45,7 +39,7 @@ def scrape(driver, url):
 
                 data.append({
                     "Chipset": name,
-                    "Antutu 11": score,
+                    "Antutu_11": score,
                     "Clock": clock,
                     "GPU": gpu
                 })
