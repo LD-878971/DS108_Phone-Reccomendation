@@ -81,8 +81,3 @@ def map_chipset_info(df_a, df_c) -> pd.DataFrame:
     df_out["gpu"] = mapped.apply(lambda x: x["gpu"] if x else None)
  
     return df_out
-
-
-# ── Test khi chạy trực tiếp ──────────────────────────────────────────────────
-if __name__ == "__main__":
-    df = map_chipset_info()
