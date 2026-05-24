@@ -2,12 +2,12 @@ import pandas as pd
 import re
 def extract_refresh_rate(raw_value):
     if pd.isna(raw_value):
-        return 0
+        return None
 
     s = str(raw_value).lower().strip()
     
     match = re.search(r'([\d.]+)\s*hz', s)
-    return float(match.group(1)) if match else 0
+    return float(match.group(1)) if match else None
 
 def clean_phone_name(raw_name):
     if pd.isna(raw_name):
@@ -74,26 +74,26 @@ def clean_phone_name(raw_name):
 
 def clean_price(raw_price):
     if pd.isna(raw_price):
-        return 0
+        return None
     s = str(raw_price).lower().strip()
     if re.search(r'liên hệ', s):
-        return 0
+        return None
     
     s = re.sub(r'[đ]', '', s)
     s = s.replace('.', '')
 
     match = re.search(r'(\d+)', s)
-    return int(match.group(1)) if match else 0
+    return int(match.group(1)) if match else None
 
 def clean_storage(raw_value):
     if pd.isna(raw_value):
-        return 0
+        return None
 
     s = str(raw_value).lower().strip()
     
     match = re.search(r'([\d.]+)', s)
     if not match:
-        return 0
+        return None
     
     value = float(match.group(1))
     
@@ -106,16 +106,16 @@ def clean_storage(raw_value):
 
 def clean_metrics(raw_value):
     if pd.isna(raw_value):
-        return 0.0
+        return None
 
     s = str(raw_value).lower().strip()
     
     match = re.search(r'([\d.]+)', s)
-    return float(match.group(1)) if match else 0.0
+    return float(match.group(1)) if match else None
 
-def normalize_chipset(text):
+def clean_chipset(text):
     if not isinstance(text, str):
-        return ""
+        return None
     
     _TRASH_VALUES = {
         "",
@@ -172,18 +172,18 @@ def normalize_chipset(text):
     s = re.sub(r"\s+", " ", s).strip()
 
     if s in _TRASH_VALUES or len(s) < 3:
-        return ""
+        return None
 
     return s
 
-def map_chipset_info(df_a, df_c):
+def add_chipset_info(df_a, df_c):
 
     map = {}
     for _, row in df_a.iterrows():
-        norm = normalize_chipset(row["Chipset"])
+        norm = clean_chipset(row["Chipset"])
         map[norm] = {"antutu_11": row["Antutu_11"], "clock": row["Clock"], "gpu": row["GPU"]}
  
-    mapped = df_c["Chipset"].apply(lambda x : map.get(normalize_chipset(x)))
+    mapped = df_c["Chipset"].apply(lambda x : map.get(clean_chipset(x)))
 
     df_out = df_c.copy()
     df_out["antutu_11"] = mapped.apply(lambda x: x["antutu_11"] if x else None)
@@ -192,7 +192,7 @@ def map_chipset_info(df_a, df_c):
  
     return df_out
 
-def parse_camera(df):
+def extract_camera_info(df):
     def clean_camera(text):
         # "hỗ trợ chụp 24MP hoặc 48MP"
         text = re.sub(r'hỗ trợ chụp.*?(?=\D{3}|$)', '', text, flags=re.IGNORECASE)
@@ -209,17 +209,17 @@ def parse_camera(df):
     def extract_aperture(text):
         vals   = re.findall(r'[fƒ]\s*/?\s*([\d.]+)', text, re.IGNORECASE)
         floats = [float(v) for v in vals if v.count('.') <= 1 and 0.5 <= float(v) <= 6.0]
-        return min(floats) if floats else 0
+        return min(floats) if floats else None
     def count_cameras(text: str, mps: list):
         if len(mps) >= 2:
             return len(mps)
         m = re.search(r'(\d)\s*camera', text, re.IGNORECASE)
         if m:
             return int(m.group(1))
-        return 1 if mps else 0
-    def parse_rear(text):
+        return 1 if mps else None
+    def extract_rear(text):
         if not isinstance(text, str) or not text.strip():
-            return {"rear_count": 0, "rear_mp_max": 0, "rear_f/": 0, "rear_ois": 0, "rear_telephoto": 0, "rear_wide": 0}
+            return {"rear_count": None, "rear_mp_max": None, "rear_f/": None, "rear_ois": None, "rear_telephoto": None, "rear_wide": None}
         mps      = extract_mp_values(text)
         aperture = extract_aperture(text)
         return {
@@ -230,64 +230,67 @@ def parse_camera(df):
             "rear_telephoto": int(bool(re.search(r'tele(?:photo)?|zoom quang|kính tiềm vọng|periscope', text, re.IGNORECASE))),
             "rear_wide": int(bool(re.search(r'siêu rộng|ultra.?wide|góc rộng|wide|superwide', text, re.IGNORECASE))),
     }
-    def parse_front(text):
+    def extract_front(text):
         if not isinstance(text, str) or not text.strip():
-            return {"front_mp": 0, "front_f/": 0}
+            return {"front_mp": None, "front_f/": None}
         mps = extract_mp_values(text)
         aperture = extract_aperture(text)
         return {
-            "front_mp": max(mps) if mps else 0,
-            "front_f/": aperture if aperture else 0,
+            "front_mp": max(mps) if mps else None,
+            "front_f/": aperture if aperture else None,
     }
-    rear  = df["Rear Camera"].apply(parse_rear).apply(pd.Series)
-    front = df["Front Camera"].apply(parse_front).apply(pd.Series)
+    rear  = df["Rear Camera"].apply(extract_rear).apply(pd.Series)
+    front = df["Front Camera"].apply(extract_front).apply(pd.Series)
     df_out = pd.concat([df, rear, front], axis=1)
 
     return df_out
 
-def add_ram(df_source, df_target, normalize_fn):
+def add_ram(df_source, df_target):
+
     def parse_ram_for_rom(mem_internal, rom_str):
         if pd.isna(mem_internal) or pd.isna(rom_str):
             return None
+        
         rom_num = re.sub(r'[^0-9]', '', str(rom_str))
         pattern = rf'{rom_num}GB\s+(\d+)GB\s+RAM'
         m = re.search(pattern, str(mem_internal), re.IGNORECASE)
         if m:
             return f"{m.group(1)} GB"
+        
         all_rams = re.findall(r'\d+GB\s+(\d+)GB\s+RAM', str(mem_internal), re.IGNORECASE)
         return f"{all_rams[0]} GB" if all_rams else None
 
     def find_match(norm_name, df_source):
-        exact = df_source[df_source['_norm'] == norm_name]
+        exact = df_source[df_source['name_clean'] == norm_name]
         if len(exact) > 0:
             return exact.iloc[0]
-        candidates = df_source[df_source['_norm'].str.contains(re.escape(norm_name), regex=True)]
+        
+        candidates = df_source[df_source['name_clean'].str.contains(re.escape(norm_name), regex=True)]
         if len(candidates) > 0:
-            return candidates.iloc[candidates['_norm'].str.len().argmin()]
-        candidates2 = df_source[df_source['_norm'].apply(lambda x: x in norm_name and len(x) > 5)]
+            return candidates.iloc[candidates['name_clean'].str.len().argmin()]
+        
+        candidates2 = df_source[df_source['name_clean'].apply(lambda x: x in norm_name and len(x) > 5)]
         if len(candidates2) > 0:
-            return candidates2.iloc[candidates2['_norm'].str.len().argmax()]
+            return candidates2.iloc[candidates2['name_clean'].str.len().argmax()]
+        
         return None
 
     df_source = df_source.copy()
     df_target = df_target.copy()
-    df_source['_norm'] = df_source['name_clean'].apply(normalize_fn)
-    df_target['_norm'] = df_target['Tên'].apply(normalize_fn)
 
     for idx, row in df_target.iterrows():
-        need_ram = pd.isna(row['Dung lượng RAM'])
-        need_bat = pd.isna(row['Pin'])
-        if not need_ram and not need_bat:
+        need_ram = pd.isna(row['RAM'])
+        if not need_ram:
             continue
 
-        match = find_match(row['_norm'], df_source)
+        match = find_match(row['Name'], df_source)
         if match is None:
             continue
 
         if need_ram:
-            ram = parse_ram_for_rom(match['Memory | Internal'], row['Bộ nhớ trong'])
+            ram = parse_ram_for_rom(match['Memory | Internal'], row['ROM'])
             if ram:
-                df_target.at[idx, 'Dung lượng RAM'] = ram
+                df_target.at[idx, 'RAM'] = ram
 
-    return df_target.drop(columns=['_norm'])
+    return df_target
 
