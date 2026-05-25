@@ -33,11 +33,13 @@ def scrape(driver, url):
             td = row.find_all("td")
             if len(td) >= 7:
                 name = td[1].find('a').text.strip()
+                link = td[1].find('a')["href"]
                 score = td[3].text.strip()
                 clock = td[6].text.strip()
                 gpu = td[7].text.strip()
 
                 data.append({
+                    "Link": link,
                     "Chipset": name,
                     "Antutu_11": score,
                     "Clock": clock,
@@ -58,14 +60,38 @@ def scrape(driver, url):
 
     return data
 
+def get_architecture(driver, data):
+    for row in data:
+        data_link = row["Link"]
+        link = f"https://nanoreview.net{data_link}"
+        try:
+            driver.get(link)
+            time.sleep(1)
+            architecture = None
+            soup_arc = BeautifulSoup(driver.page_source, "html.parser")
+
+            tr_tag = soup_arc.find_all("tr")
+            for tr in tr_tag:
+                td = tr.find("td", class_ = "cell-h")
+                if td and td.text.strip() == "Architecture":
+                    arc_tag = tr.find('td', class_ = "cell-s")
+                    architecture = arc_tag.get_text(separator = ' | ', strip = True)
+                    row['Architecture'] = architecture
+                    break
+            
+        except Exception as e:
+            print(e)
+    return data
+
 def main():
     url = "https://nanoreview.net/en/soc-list/rating"
     driver = setup_driver()
 
-    antutu_score = scrape(driver, url)
+    data = scrape(driver, url)
+    antutu_score = get_architecture(driver, data)
 
     df = pd.DataFrame(antutu_score)
-    df.to_csv("antutu_score_socket.csv", index = False)
+    df.to_csv("antutu_socket.csv", index = False)
 
     driver.quit()
 

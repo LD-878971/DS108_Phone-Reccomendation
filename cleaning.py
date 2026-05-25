@@ -9,6 +9,37 @@ def extract_refresh_rate(raw_value):
     match = re.search(r'([\d.]+)\s*hz', s)
     return float(match.group(1)) if match else None
 
+def extract_architecture(arch_str):
+    if pd.isna(arch_str):
+        return None, None, None
+ 
+    clusters = arch_str.split("|")
+ 
+    total_cores = 0
+    freqs = []
+    min_freq = float("inf")
+ 
+    for cluster in clusters:
+        cluster = cluster.strip()
+ 
+        match = re.search(r"(\d+)x\s+([\d.]+)\s*GHz", cluster)
+        if not match:
+            continue
+ 
+        count = int(match.group(1))
+        freq = float(match.group(2))
+ 
+        total_cores += count
+        freqs.append((count, freq))
+        min_freq = min(min_freq, freq)
+ 
+    if not freqs:
+        return None, None, None
+ 
+    weighted_mean = sum(c * f for c, f in freqs) / total_cores
+ 
+    return total_cores, round(min_freq, 3), round(weighted_mean, 3)
+
 def clean_phone_name(raw_name):
     if pd.isna(raw_name):
         return ""
@@ -46,6 +77,7 @@ def clean_phone_name(raw_name):
         r"special edition",
         r"edition",
         r'china',
+        r'trẻ em',
         '2021',
         '2022',
         '2023',
@@ -95,7 +127,7 @@ def clean_storage(raw_value):
     if not match:
         return None
     
-    value = float(match.group(1))
+    value = int(match.group(1))
     
     if 'tb' in s:
         value = value * 1024
@@ -181,7 +213,7 @@ def add_chipset_info(df_a, df_c):
     map = {}
     for _, row in df_a.iterrows():
         norm = clean_chipset(row["Chipset"])
-        map[norm] = {"antutu_11": row["Antutu_11"], "clock": row["Clock"], "gpu": row["GPU"]}
+        map[norm] = {"antutu_11": row["Antutu_11"], "clock": row["Clock"], "gpu": row["GPU"], "architecture": row["Architecture"]}
  
     mapped = df_c["Chipset"].apply(lambda x : map.get(clean_chipset(x)))
 
@@ -189,27 +221,27 @@ def add_chipset_info(df_a, df_c):
     df_out["antutu_11"] = mapped.apply(lambda x: x["antutu_11"] if x else None)
     df_out["clock"] = mapped.apply(lambda x: x["clock"] if x else None)
     df_out["gpu"] = mapped.apply(lambda x: x["gpu"] if x else None)
- 
+    df_out['architecture'] = mapped.apply(lambda x: x["architecture"] if x else None)
     return df_out
 
 def extract_camera_info(df):
     def clean_camera(text):
-        # "hỗ trợ chụp 24MP hoặc 48MP"
         text = re.sub(r'hỗ trợ chụp.*?(?=\D{3}|$)', '', text, flags=re.IGNORECASE)
-        # "(24MP và 48MP)", "(24MP hoặc 48MP)"
         text = re.sub(r'\([\d.]+\s*MP\s*(?:và|hoặc|or)\s*[\d.]+\s*MP\)', '', text, flags=re.IGNORECASE)
-        # "hoặc 48MP" còn sót
         text = re.sub(r'(?:hoặc|hoac|hay|or)\s+[\d.]+\s*MP', '', text, flags=re.IGNORECASE)
         return text
+    
     def extract_mp_values(text):
         text = clean_camera(text)
         vals  = re.findall(r'([\d.]+)\s*(?:MP|megapixel)', text, re.IGNORECASE)
         vals += re.findall(r'([\d.]+)M(?=[^a-zA-Z]|$)', text)
         return [float(v) for v in vals if v.count('.') <= 1 and float(v) >= 0.3]
+    
     def extract_aperture(text):
         vals   = re.findall(r'[fƒ]\s*/?\s*([\d.]+)', text, re.IGNORECASE)
         floats = [float(v) for v in vals if v.count('.') <= 1 and 0.5 <= float(v) <= 6.0]
         return min(floats) if floats else None
+    
     def count_cameras(text: str, mps: list):
         if len(mps) >= 2:
             return len(mps)
@@ -217,10 +249,11 @@ def extract_camera_info(df):
         if m:
             return int(m.group(1))
         return 1 if mps else None
+    
     def extract_rear(text):
         if not isinstance(text, str) or not text.strip():
             return {"rear_count": None, "rear_mp_max": None, "rear_f/": None, "rear_ois": None, "rear_telephoto": None, "rear_wide": None}
-        mps      = extract_mp_values(text)
+        mps = extract_mp_values(text)
         aperture = extract_aperture(text)
         return {
             "rear_count": count_cameras(text, mps),
@@ -230,6 +263,7 @@ def extract_camera_info(df):
             "rear_telephoto": int(bool(re.search(r'tele(?:photo)?|zoom quang|kính tiềm vọng|periscope', text, re.IGNORECASE))),
             "rear_wide": int(bool(re.search(r'siêu rộng|ultra.?wide|góc rộng|wide|superwide', text, re.IGNORECASE))),
     }
+
     def extract_front(text):
         if not isinstance(text, str) or not text.strip():
             return {"front_mp": None, "front_f/": None}
@@ -239,6 +273,7 @@ def extract_camera_info(df):
             "front_mp": max(mps) if mps else None,
             "front_f/": aperture if aperture else None,
     }
+
     rear  = df["Rear Camera"].apply(extract_rear).apply(pd.Series)
     front = df["Front Camera"].apply(extract_front).apply(pd.Series)
     df_out = pd.concat([df, rear, front], axis=1)
@@ -294,3 +329,11 @@ def add_ram(df_source, df_target):
 
     return df_target
 
+def fill_mean_nearest(data):
+    mean_val = data.mean()
+    unique_values = data.dropna().unique()
+    nearest_value = min(unique_values, key=lambda x: abs(x - mean_val))
+    return data.fillna(nearest_value)
+
+def fill_mean(data):
+    return data.fillna(round(data.mean(),3))

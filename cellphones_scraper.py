@@ -82,6 +82,7 @@ def get_products(html_src):
 
         link_tag = container.find("a")
         link = link_tag["href"]
+        
         products.append({
             "Name": name,
             "Price": price,
@@ -90,17 +91,8 @@ def get_products(html_src):
 
     return products
 
-def get_product_spec(driver, products):
-#     specs_needs = {
-#     "Kích thước màn hình": "Screen_size",
-#     "Dung lượng RAM": "RAM",
-#     "Bộ nhớ trong": "ROM",
-#     "Pin": "Battery",
-#     "Chipset": "Chipset",
-#     "Camera sau": "Back_camera",
-#     "Camera trước": "Front_camera"
-# }
-    
+def get_product_spec(driver, products): 
+    count = 0    
     for product in products:
         link = product['Link'] 
         try:
@@ -120,13 +112,14 @@ def get_product_spec(driver, products):
             spec_container = soup_spec.find_all("tr", class_ = "technical-content-item")
             for spec in spec_container:
                 td = spec.find_all("td")
-                td_text = td[0].text.strip()
-                td_spec = td[1].text.strip()
+                td_text = td[0].get_text(strip = True)
+                td_spec = td[1].get_text(strip = True)
                 product[td_text] = td_spec
-
-            print("Da crawl!")
-        except Exception:
-            print("Link ERROR!")
+            
+            count = count + 1
+            print(f"Da crawl {count}!")
+        except Exception as e:
+            print(e)
         
     return products
 
@@ -137,12 +130,14 @@ def save_to_csv(data, name):
 def main():
     url = "https://cellphones.com.vn/mobile.html"
     driver = setup_driver()
-    html_src = load_full_page(driver, url)
-    products = get_products(html_src)
+    # html_src = load_full_page(driver, url)
+    # products = get_products(html_src)
+    products = pd.read_csv(r'cellphones_raw.csv')
+    products = products.to_dict('records')
     detail_products = get_product_spec(driver, products)
     driver.quit()
 
-    save_to_csv(products, "cellphones_raw")
+    save_to_csv(detail_products, "cellphones_raw")
 
 if __name__ == "__main__":
     main()

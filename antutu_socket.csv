@@ -1,0 +1,234 @@
+Link,Chipset,Antutu_11,Clock,GPU,Architecture
+/en/soc/qualcomm-snapdragon-8-elite-2,Snapdragon 8 Elite Gen 5,3932243,4610 MHz,Adreno 840,2x 4.61 GHz – Oryon Gen 3 Prime | 6x 3.63 GHz – Oryon Gen 3 Performance
+/en/soc/apple-a19-pro,A19 Pro,2606807,4260 MHz,Apple A19 Pro GPU,2x 4.26 GHz – Everest | 4x 2.6 GHz – Sawtooth
+/en/soc/mediatek-dimensity-9500,Dimensity 9500,3508681,4210 MHz,Mali-G1 Ultra MP12,1x 4.21 GHz – C1-Ultra | 3x 3.5 GHz – C1-Premium | 4x 2.7 GHz – C1-Pro
+/en/soc/samsung-exynos-2600,Exynos 2600,3145925,3800 MHz,Samsung Xclipse 960,1x 3.8 GHz – C1-Ultra | 3x 3.25 GHz – C1-Pro | 6x 2.75 GHz – C1-Pro
+/en/soc/qualcomm-snapdragon-8-gen-4,Snapdragon 8 Elite (Gen 4),3336910,4320 MHz,Adreno 830,2x 4.32 GHz – Oryon (Phoenix L) | 6x 3.53 GHz – Oryon (Phoenix M)
+/en/soc/apple-a19,Apple A19,2239708,4260 MHz,Apple A19 GPU,2x 4.26 GHz – Everest | 4x 2.6 GHz – Sawtooth
+/en/soc/mediatek-dimensity-9500s,Dimensity 9500s,3041307,3730 MHz,Mali-G925  MP12,1x 3.73 GHz – Cortex-X925 | 3x 3.3 GHz – Cortex-X4 | 4x 2.4 GHz – Cortex-A720
+/en/soc/mediatek-dimensity-9400-plus,Dimensity 9400 Plus,2874956,3730 MHz,Mali-G925  MP12,1x 3.73 GHz – Cortex-X925 | 3x 3.3 GHz – Cortex-X4 | 4x 2.4 GHz – Cortex-A720
+/en/soc/mediatek-dimensity-9400,Dimensity 9400,2825187,3620 MHz,Mali-G925  MP12,1x 3.62 GHz – Cortex-X925 | 3x 3.3 GHz – Cortex-X4 | 4x 2.4 GHz – Cortex-A720
+/en/soc/qualcomm-snapdragon-8-gen-5,Snapdragon 8 Gen 5,3082388,3800 MHz,Adreno 829,2x 3.8 GHz – | 6x 3.32 GHz –
+/en/soc/xiaomi-xring-o1,Xring O1,2998904,3900 MHz,Mali-G925  MP16,2x 3.9 GHz – Cortex-X925 | 4x 3.4 GHz – Cortex-A725 | 2x 1.9 GHz – Cortex-A725 | 2x 1.8 GHz – Cortex-A520
+/en/soc/apple-a18,Apple A18,1918031,4050 MHz,Apple A18 GPU,2x 4.05 GHz – Everest | 4x 2.42 GHz – Sawtooth
+/en/soc/samsung-exynos-2500,Exynos 2500,2420011,3300 MHz,Samsung Xclipse 950,1x 3.3 GHz – Cortex-X925 | 2x 2.74 GHz – Cortex-A725 | 5x 2.36 GHz – Cortex-A725 | 2x 1.8 GHz – Cortex-A520
+/en/soc/apple-a18-pro,A18 Pro,1808835,4050 MHz,Apple A18 Pro GPU,2x 4.05 GHz – Everest | 4x 2.42 GHz – Sawtooth
+/en/soc/mediatek-dimensity-9300,Dimensity 9300,2415558,3250 MHz,Mali-G720  MP12,1x 3.25 GHz – Cortex-X4 | 3x 2.85 GHz – Cortex-X4 | 4x 2 GHz – Cortex-A720
+/en/soc/mediatek-dimensity-9400e,Dimensity 9400e,2474831,3400 MHz,Mali-G720  MP12,1x 3.4 GHz – Cortex-X4 | 3x 2.85 GHz – Cortex-X4 | 4x 2 GHz – Cortex-A720
+/en/soc/mediatek-dimensity-9300-plus,Dimensity 9300 Plus,2347116,3400 MHz,Mali-G720  MP12,1x 3.4 GHz – Cortex-X4 | 3x 2.85 GHz – Cortex-X4 | 4x 2 GHz – Cortex-A720
+/en/soc/qualcomm-snapdragon-8-gen-3,Snapdragon 8 Gen 3,2341391,3300 MHz,Adreno 750,1x 3.3 GHz – Cortex-X4 | 3x 3.15 GHz – Cortex-A720 | 2x 2.96 GHz – Cortex-A720 | 2x 2.27 GHz – Cortex-A520
+/en/soc/apple-a17-pro,A17 Pro,1503813,3780 MHz,Apple A17 GPU,2x 3.78 GHz – Everest | 4x 2.11 GHz – Sawtooth
+/en/soc/qualcomm-snapdragon-8s-gen-4,Snapdragon 8s Gen 4,2301396,3210 MHz,Adreno 825,1x 3.21 GHz – Cortex-X4 | 3x 3 GHz – Cortex-A720 | 2x 2.8 GHz – Cortex-A720 | 2x 2.02 GHz – Cortex-A720
+/en/soc/apple-a16-bionic,A16 Bionic,1633145,3460 MHz,Apple A16 GPU,2x 3.46 GHz – Everest | 4x 2.02 GHz – Sawtooth
+/en/soc/samsung-exynos-2400,Exynos 2400,2037320,3210 MHz,Samsung Xclipse 940,1x 3.21 GHz – Cortex-X4 | 2x 2.9 GHz – Cortex-A720 | 3x 2.6 GHz – Cortex-A720 | 4x 1.95 GHz – Cortex-A520
+/en/soc/samsung-exynos-2400e,Exynos 2400e,1971406,3110 MHz,Samsung Xclipse 940,1x 3.11 GHz – Cortex-X4 | 2x 2.9 GHz – Cortex-A720 | 3x 2.6 GHz – Cortex-A720 | 4x 1.95 GHz – Cortex-A520
+/en/soc/mediatek-dimensity-8500,Dimensity 8500,2153969,3400 MHz,Mali-G720 MP8,1x 3.4 GHz – Cortex-A725 | 3x 3.2 GHz – Cortex-A725 | 4x 2.2 GHz – Cortex-A725
+/en/soc/mediatek-dimensity-8450,Dimensity 8450,2016572,3250 MHz,Mali-G720 MP7,1x 3.25 GHz – Cortex-A725 | 3x 3 GHz – Cortex-A725 | 4x 2.1 GHz – Cortex-A725
+/en/soc/apple-a15-bionic,A15 Bionic,1413275,3230 MHz,Apple A15 GPU,2x 3.23 GHz – Avalanche | 4x 2.02 GHz – Blizzard
+/en/soc/mediatek-dimensity-8400,Dimensity 8400,1934134,3250 MHz,Mali-G720 MP7,1x 3.25 GHz – Cortex-A725 | 3x 3 GHz – Cortex-A725 | 4x 2.1 GHz – Cortex-A725
+/en/soc/mediatek-dimensity-9200-plus,Dimensity 9200 Plus,1798756,3350 MHz,Mali-G715  MP11,1x 3.35 GHz – Cortex-X3 | 3x 3 GHz – Cortex-A715 | 4x 2 GHz – Cortex-A510
+/en/soc/qualcomm-snapdragon-8-gen-2,Snapdragon 8 Gen 2,1752044,3200 MHz,Adreno 740,1x 3.2 GHz – Cortex-X3 | 2x 2.8 GHz – Cortex-A715 | 2x 2.8 GHz – Cortex-A710 | 3x 2 GHz – Cortex-A510
+/en/soc/mediatek-dimensity-9200,Dimensity 9200,1755232,3050 MHz,Mali-G715  MP11,1x 3.05 GHz – Cortex-X3 | 3x 2.85 GHz – Cortex-A715 | 4x 1.8 GHz – Cortex-A510
+/en/soc/qualcomm-snapdragon-8s-gen-3,Snapdragon 8s Gen 3,1795718,3000 MHz,Adreno 735,1x 3 GHz – Cortex-X4 | 4x 2.8 GHz – Cortex-A720 | 3x 2 GHz – Cortex-A520
+/en/soc/qualcomm-snapdragon-7-plus-gen-3,Snapdragon 7 Plus Gen 3,1647728,2800 MHz,Adreno 732,1x 2.8 GHz – Cortex-X4 | 4x 2.6 GHz – Cortex-A720 | 3x 1.9 GHz – Cortex-A520
+/en/soc/apple-a14-bionic,A14 Bionic,1337390,3100 MHz,Apple A14 GPU,2x 3.1 GHz – Firestorm | 4x 1.8 GHz – Icestorm
+/en/soc/hisilicon-kirin-9030,Kirin 9030 Pro,2101808,2750 MHz,Maleoon 935,1x 2.75 GHz – Taishan v124 Big | 4x 2.27 GHz – Taishan v124 Mid | 4x 1.72 GHz – Taishan v124 Little
+/en/soc/mediatek-dimensity-8350,Dimensity 8350,1718082,3350 MHz,Mali-G615 MP6,1x 3.35 GHz – Cortex-A715 | 3x 3.2 GHz – Cortex-A715 | 4x 2.2 GHz – Cortex-A510
+/en/soc/google-tensor-g5,Tensor G5,1467600,3780 MHz,PowerVR DXT-48-1536,1x 3.78 GHz – Cortex-X4 | 5x 3.05 GHz – Cortex-A725 | 2x 2.25 GHz – Cortex-A520
+/en/soc/google-tensor-g4,Tensor G4,1499601,3100 MHz,Mali-G715 MP7,1x 3.1 GHz – Cortex-X4 | 3x 2.6 GHz – Cortex-A720 | 4x 1.92 GHz – Cortex-A520
+/en/soc/mediatek-dimensity-9000-plus,Dimensity 9000 Plus,1453683,3200 MHz,Mali-G710 MP10,1x 3.2 GHz – Cortex-X2 | 3x 2.85 GHz – Cortex-A710 | 4x 1.8 GHz – Cortex-A510
+/en/soc/mediatek-dimensity-8300,Dimensity 8300,1609292,3350 MHz,Mali-G615 MP6,1x 3.35 GHz – Cortex-A715 | 3x 3.2 GHz – Cortex-A715 | 4x 2.2 GHz – Cortex-A510
+/en/soc/snapdragon-8-plus-gen-1,Snapdragon 8 Plus Gen 1,1411891,3200 MHz,Adreno 730,1x 3.2 GHz – Cortex-X2 | 3x 2.75 GHz – Cortex-A710 | 4x 2 GHz – Cortex-A510
+/en/soc/google-tensor-g3,Tensor G3,1414384,2910 MHz,Mali-G715 MP7,1x 2.91 GHz – Cortex-X3 | 4x 2.37 GHz – Cortex-A715 | 4x 1.7 GHz – Cortex-A510
+/en/soc/samsung-exynos-2200,Exynos 2200,1470636,2800 MHz,Samsung Xclipse 920,1x 2.8 GHz – Cortex-X2 | 3x 2.52 GHz – Cortex-A710 | 4x 1.82 GHz – Cortex-A510
+/en/soc/mediatek-dimensity-9000,Dimensity 9000,1409448,3050 MHz,Mali-G710 MP10,1x 3.05 GHz – Cortex-X2 | 3x 2.85 GHz – Cortex-A710 | 4x 1.8 GHz – Cortex-A510
+/en/soc/apple-a13-bionic,A13 Bionic,1091336,2650 MHz,Apple A13 GPU,2x 2.65 GHz – Lightning | 4x 1.6 GHz – Thunder
+/en/soc/samsung-exynos-1680,Exynos 1680,1390055,2900 MHz,Samsung Xclipse 550,1x 2.9 GHz – Cortex-A720 | 4x 2.6 GHz – Cortex-A720 | 3x 1.95 GHz – Cortex-A520
+/en/soc/qualcomm-snapdragon-8-gen-1,Snapdragon 8 Gen 1,1294632,3000 MHz,Adreno 730,1x 3 GHz – Cortex-X2 | 3x 2.5 GHz – Cortex-A710 | 4x 1.8 GHz – Cortex-A510
+/en/soc/qualcomm-snapdragon-7-plus-gen-2,Snapdragon 7 Plus Gen 2,1285461,2910 MHz,Adreno 725,1x 2.91 GHz – Cortex-X2 | 3x 2.49 GHz – Cortex-A710 | 4x 1.8 GHz – Cortex-A510
+/en/soc/qualcomm-snapdragon-888-plus,Snapdragon 888 Plus,1208784,2995 MHz,Adreno 660,1x 2.995 GHz – Kryo 680 Prime (Cortex-X1) | 3x 2.42 GHz – Kryo 680 Gold (Cortex-A78) | 4x 1.8 GHz – Kryo 680 Silver (Cortex-A55)
+/en/soc/hisilicon-kirin-9030s,Kirin 9030S,1607132,3000 MHz,Maleoon 935F,1x 3 GHz – Taishan v124 Big | 3x 2.27 GHz – Taishan v124 Mid | 4x 1.72 GHz – Taishan v124 Little
+/en/soc/samsung-exynos-1580,Exynos 1580,1243000,2900 MHz,Samsung Xclipse 540,1x 2.9 GHz – Cortex-A720 | 3x 2.6 GHz – Cortex-A720 | 4x 1.95 GHz – Cortex-A520
+/en/soc/qualcomm-snapdragon-7-gen-4,Snapdragon 7 Gen 4,1261959,2800 MHz,Adreno 722,1x 2.8 GHz – Kryo Prime (Cortex-720) | 4x 2.4 GHz – Kryo Gold  (Cortex-720) | 3x 1.84 GHz – Kryo Silver (Cortex-520)
+/en/soc/mediatek-dimensity-8200,Dimensity 8200,1206715,3100 MHz,Mali-G610 MP6,1x 3.1 GHz – Cortex A78 | 3x 3 GHz – Cortex A78 | 4x 2 GHz – Cortex A55
+/en/soc/google-tensor-g2,Tensor G2,1158921,2850 MHz,Mali-G710 MP7,2x 2.85 GHz – Cortex-X1 | 2x 2.35 GHz – Cortex-A78 | 4x 1.8 GHz – Cortex-A55
+/en/soc/hisilicon-kirin-9020,Kirin 9020,1383793,2500 MHz,Maleoon 920,1x 2.5 GHz – TaiShan V121 | 3x 2.15 GHz – TaiShan V120 | 4x 1.6 GHz – Taishan-Little
+/en/soc/google-tensor,Google Tensor,1019946,2800 MHz,Mali-G78 MP20,2x 2.8 GHz – Cortex-X1 | 2x 2.25 GHz – Cortex A76 | 4x 1.8 GHz – Cortex A55
+/en/soc/qualcomm-snapdragon-875,Snapdragon 888,1118041,2840 MHz,Adreno 660,1x 2.84 GHz – Kryo 680 Prime (Cortex-X1) | 3x 2.42 GHz – Kryo 680 Gold (Cortex-A78) | 4x 1.8 GHz – Kryo 680 Silver (Cortex-A55)
+/en/soc/hisilicon-kirin-9000,Kirin 9000,1079281,3130 MHz,Mali-G78 MP24,1x 3.13 GHz – Cortex-A77 | 3x 2.54 GHz – Cortex-A77 | 4x 2.05 GHz – Cortex-A55
+/en/soc/hisilicon-kirin-9010,Kirin 9010,1155792,2300 MHz,Maleoon 910,1x 2.3 GHz – TaiShan V121 | 3x 2.18 GHz – TaiShan V121 | 4x 1.55 GHz – Cortex-A510
+/en/soc/mediatek-dimensity-8100,Dimensity 8100,1085324,2850 MHz,Mali-G610 MP6,4x 2.85 GHz – Cortex-A78 | 4x 2 GHz – Cortex-A55
+/en/soc/samsung-exynos-2100,Exynos 2100,1042710,2900 MHz,Mali-G78 MP14,1x 2.91 GHz – Cortex-X1 | 3x 2.81 GHz – Cortex-A78 | 4x 2.2 GHz – Cortex-A55
+/en/soc/apple-a12-bionic,A12 Bionic,895627,2490 MHz,Apple A12 GPU,2x 2.49 GHz – Vortex | 4x 1.6 GHz – Tempest
+/en/soc/qualcomm-snapdragon-7s-gen-4,Snapdragon 7s Gen 4,986597,2700 MHz,Adreno 810,1x 2.7 GHz – Kryo Prime (Cortex-A720) | 3x 2.4 GHz – Kryo Gold  (Cortex-A720) | 4x 1.8 GHz – Kryo Silver (Cortex-A520)
+/en/soc/mediatek-dimensity-8000,Dimensity 8000,1080933,2750 MHz,-,4x 2.75 GHz – Cortex-A78 | 4x 2 GHz – Cortex-A55
+/en/soc/qualcomm-snapdragon-870,Snapdragon 870,1005598,3200 MHz,Adreno 650,1x 3.2 GHz – Kryo 585 Prime (Cortex-A77) | 3x 2.42 GHz – Kryo 585 Gold (Cortex-A77) | 4x 1.8 GHz – Kryo 585 Silver (Cortex-A55)
+/en/soc/qualcomm-snapdragon-6-gen-5,Snapdragon 6 Gen 5,1073789,2600 MHz,-,4x 2.6 GHz – Kryo Prime (Cortex-A720) | 4x 2 GHz – Kryo Silver (Cortex-A520)
+/en/soc/qualcomm-snapdragon-7s-gen-3,Snapdragon 7s Gen 3,1038717,2500 MHz,Adreno 810,1x 2.5 GHz – Kryo Prime (Cortex-A720) | 3x 2.4 GHz – Kryo Gold  (Cortex-A720) | 4x 1.8 GHz – Kryo Silver (Cortex-A520)
+/en/soc/qualcomm-snapdragon-7-gen-3,Snapdragon 7 Gen 3,1020938,2630 MHz,Adreno 720,1x 2.63 GHz – Kryo Prime (Cortex-A715) | 3x 2.4 GHz – Kryo Gold  (Cortex-A715) | 4x 1.8 GHz – Kryo Silver (Cortex-A510)
+/en/soc/qualcomm-snapdragon-865-plus,Snapdragon 865 Plus,909414,3100 MHz,Adreno 650,1x 3.1 GHz – Kryo 585 Prime (Cortex-A77) | 3x 2.42 GHz – Kryo 585 Gold (Cortex-A77) | 4x 1.8 GHz – Kryo 585 Silver (Cortex-A55)
+/en/soc/hisilicon-kirin-8020,Kirin 8020,1021894,2285 MHz,Maleoon 920,1x 2.285 GHz – | 3x 2.05 GHz – | 4x 1.3 GHz –
+/en/soc/mediatek-dimensity-7350,Dimensity 7350,1037391,3000 MHz,-,2x 3 GHz – Cortex-A715 | 6x 2 GHz – Cortex-A510
+/en/soc/samsung-exynos-1480,Exynos 1480,997728,2750 MHz,Samsung Xclipse 530,4x 2.75 GHz – Cortex-A78 | 4x 2 GHz – Cortex-A55
+/en/soc/mediatek-dimensity-8050,Dimensity 8050,1028453,3000 MHz,Mali-G77 MP9,1x 3 GHz – Cortex-A78 | 3x 2.6 GHz – Cortex-A78 | 4x 2 GHz – Cortex-A55
+/en/soc/mediatek-dimensity-8020,Dimensity 8020,969978,2600 MHz,Mali-G77 MP9,4x 2.6 GHz – Cortex-A78 | 4x 2 GHz – Cortex-A55
+/en/soc/qualcomm-snapdragon-865,Snapdragon 865,964589,2840 MHz,Adreno 650,1x 2.84 GHz – Kryo 585 Prime (Cortex-A77) | 3x 2.42 GHz – Kryo 585 Gold (Cortex-A77) | 4x 1.8 GHz – Kryo 585 Silver (Cortex-A55)
+/en/soc/qualcomm-snapdragon-6-gen-4,Snapdragon 6 Gen 4,963651,2300 MHz,Adreno 810,1x 2.3 GHz – Kryo Prime (Cortex-A720) | 3x 2.2 GHz – Kryo Gold  (Cortex-A720) | 4x 1.8 GHz – Kryo Silver (Cortex-A520)
+/en/soc/mediatek-dimensity-7200-ultra,Dimensity 7200 Ultra,960142,2800 MHz,-,2x 2.8 GHz – Cortex-A715 | 6x 2 GHz – Cortex-A510
+/en/soc/hisilicon-kirin-9000s,Kirin 9000S,1062256,2620 MHz,Maleoon 910,1x 2.62 GHz – TaiShan V120 | 3x 2.15 GHz – TaiShan V120 | 4x 1.53 GHz – Cortex-A510
+/en/soc/mediatek-dimensity-7200,Dimensity 7200,971424,2800 MHz,-,2x 2.8 GHz – Cortex-A715 | 6x 2 GHz – Cortex-A510
+/en/soc/mediatek-dimensity-1300,Dimensity 1300,954090,3000 MHz,Mali-G77 MP9,1x 3 GHz – Cortex-A78 | 3x 2.6 GHz – Cortex-A78 | 4x 2 GHz – Cortex-A55
+/en/soc/mediatek-dimensity-1100,Dimensity 1100,972810,2600 MHz,Mali-G77 MP9,4x 2.6 GHz – Cortex-A78 | 4x 2 GHz – Cortex-A55
+/en/soc/mediatek-dimensity-1200,Dimensity 1200,980006,3000 MHz,Mali-G77 MP9,1x 3 GHz – Cortex-A78 | 3x 2.6 GHz – Cortex-A78 | 4x 2 GHz – Cortex-A55
+/en/soc/samsung-exynos-990,Exynos 990,901199,2730 MHz,Mali-G77 MP11,2x 2.73 GHz – Exynos M5 | 2x 2.5 GHz – Cortex-A76 | 4x 2 GHz – Cortex-A55
+/en/soc/mediatek-dimensity-7400,Dimensity 7400,929183,2600 MHz,Mali-G615 MP2,4x 2.6 GHz – Cortex-A78 | 4x 2 GHz – Cortex-A55
+/en/soc/qualcomm-snapdragon-6-gen-3,Snapdragon 6 Gen 3,833548,2400 MHz,Adreno 710,4x 2.4 GHz – Cortex-A78 | 4x 1.8 GHz – Cortex-A55
+/en/soc/qualcomm-snapdragon-7-gen-1,Snapdragon 7 Gen 1,829085,2400 MHz,Adreno 644,1x 2.4 GHz – Cortex-A710 | 3x 2.36 GHz – Cortex-A710 | 4x 1.8 GHz – Cortex-A510
+/en/soc/qualcomm-snapdragon-778g-plus,Snapdragon 778G Plus,800145,2500 MHz,Adreno 642,1x 2.5 GHz – Kryo 670 Prime (Cortex-A78) | 3x 2.4 GHz – Kryo 670 Gold (Cortex-A78) | 4x 1.8 GHz – Kryo 670 Silver (Cortex-A55)
+/en/soc/mediatek-dimensity-1000-plus,Dimensity 1000 Plus,708890,2600 MHz,Mali-G77 MP9,4x 2.6 GHz – Cortex-A77 | 4x 2 GHz – Cortex-A55
+/en/soc/hisilicon-kirin-990-5g,Kirin 990 (5G),887876,2860 MHz,Mali-G76 MP16,2x 2.86 GHz – Cortex-A76 | 2x 2.36 GHz – Cortex-A76 | 4x 1.95 GHz – Cortex-A55
+/en/soc/qualcomm-snapdragon-855-plus,Snapdragon 855 Plus,859084,2960 MHz,Adreno 640,1x 2.96 GHz – Cortex-A76 (Kryo 485 Gold) | 3x 2.42 GHz – Cortex-A76 (Kryo 485 Gold) | 4x 1.8 GHz – Cortex-A55 (Kryo 485 Silver)
+/en/soc/mediatek-dimensity-7360,Dimensity 7360,922560,2500 MHz,Mali-G615 MP2,4x 2.5 GHz – Cortex-A78 | 4x 2 GHz – Cortex-A55
+/en/soc/qualcomm-snapdragon-6s-gen-4,Snapdragon 6s Gen 4,831969,2400 MHz,Adreno 710,4x 2.4 GHz – Cortex-A78 | 4x 1.8 GHz – Cortex-A55
+/en/soc/mediatek-dimensity-7300,Dimensity 7300,877329,2500 MHz,Mali-G615 MP2,4x 2.5 GHz – Cortex-A78 | 4x 2 GHz – Cortex-A55
+/en/soc/qualcomm-snapdragon-7s-gen-2,Snapdragon 7s Gen 2,794701,2400 MHz,Adreno 710,4x 2.4 GHz – Cortex-A78 | 4x 1.95 GHz – Cortex-A55
+/en/soc/qualcomm-snapdragon-782g,Snapdragon 782G,806420,2700 MHz,Adreno 642,1x 2.7 GHz – Cortex-A78 | 3x 2.4 GHz – Cortex-A78 | 4x 1.8 GHz – Cortex-A55
+/en/soc/qualcomm-snapdragon-778g-5g,Snapdragon 778G,780000,2400 MHz,Adreno 642,1x 2.4 GHz – Kryo 670 Prime (Cortex-A78) | 3x 2.4 GHz – Kryo 670 Gold (Cortex-A78) | 4x 1.8 GHz – Kryo 670 Silver (Cortex-A55)
+/en/soc/qualcomm-snapdragon-780g,Snapdragon 780G,782789,2400 MHz,Adreno 642,1x 2.4 GHz – Kryo 670 Prime (Cortex-A78) | 3x 2.2 GHz – Kryo 670 Gold (Cortex-A78) | 4x 1.9 GHz – Kryo 670 Silver (Cortex-A55)
+/en/soc/qualcomm-snapdragon-860,Snapdragon 860,813344,2960 MHz,Adreno 640,1x 2.96 GHz – Cortex-A76 (Kryo 485 Prime) | 3x 2.42 GHz – Cortex-A76 (Kryo 485 Gold) | 4x 1.8 GHz – Cortex-A55 (Kryo 485 Silver)
+/en/soc/qualcomm-snapdragon-855,Snapdragon 855,820253,2840 MHz,Adreno 640,1x 2.84 GHz – Cortex-A76 (Kryo 485 Gold) | 3x 2.42 GHz – Cortex-A76 (Kryo 485 Gold) | 4x 1.8 GHz – Cortex-A55 (Kryo 485 Silver)
+/en/soc/hisilicon-kirin-8000,Kirin 8000,829838,2400 MHz,-,1x 2.4 GHz – 1xA77 H | 3x 2.19 GHz – 1xA77 L | 4x 1.84 GHz – A55
+/en/soc/mediatek-dimensity-7030,Dimensity 7030,737693,2500 MHz,Mali-G610 MP3,2x 2.5 GHz – Cortex-A78 | 6x 2 GHz – Cortex-A55
+/en/soc/mediatek-dimensity-1080,Dimensity 1080,722902,2600 MHz,Mali-G68 MP4,2x 2.6 GHz – Cortex-A78 | 6x 2 GHz – Cortex-A55
+/en/soc/samsung-exynos-9825,Exynos 9825,798922,2730 MHz,Mali-G76 MP12,2x 2.73 GHz – M4 | 2x 2.4 GHz – Cortex-A75 | 4x 1.95 GHz – Cortex-A55
+/en/soc/apple-a11-bionic,A11 Bionic,626912,2390 MHz,Apple A11 GPU,2x 2.39 GHz – Monsoon | 4x 1.42 GHz – Mistral
+/en/soc/mediatek-dimensity-7100,Dimensity 7100,768176,2400 MHz,Mali-G610 MP2,4x 2.4 GHz – Cortex-A78 | 4x 2 GHz – Cortex-A55
+/en/soc/qualcomm-snapdragon-6-gen-1,Snapdragon 6 Gen 1,733620,2200 MHz,Adreno 710,4x 2.2 GHz – Cortex-A78 | 4x 1.8 GHz – Cortex-A55
+/en/soc/mediatek-dimensity-7050,Dimensity 7050,802497,2600 MHz,Mali-G68 MP4,2x 2.6 GHz – Cortex-A78 | 6x 2 GHz – Cortex-A55
+/en/soc/samsung-exynos-1380,Exynos 1380,765609,2400 MHz,Mali-G68 MP5,4x 2.4 GHz – Cortex-A78 | 4x 2 GHz – Cortex-A55
+/en/soc/mediatek-dimensity-920,Dimensity 920,750481,2500 MHz,Mali-G68 MP4,2x 2.5 GHz – Cortex-A78 | 6x 2 GHz – Cortex-A55
+/en/soc/qualcomm-snapdragon-4-gen-4,Snapdragon 4 Gen 4,600942,2300 MHz,Adreno 613,2x 2.3 GHz – Cortex-A78 | 6x 2 GHz – Cortex-A55
+/en/soc/mediatek-dimensity-7060,Dimensity 7060,679213,2600 MHz,IMG BXM-8-256,2x 2.6 GHz – Cortex-A78 | 6x 2 GHz – Cortex-A55
+/en/soc/mediatek-dimensity-1050,Dimensity 1050,668004,2500 MHz,-,2x 2.5 GHz – Cortex-A78 | 6x 2 GHz – Cortex-A55
+/en/soc/mediatek-dimensity-930,Dimensity 930,593307,2200 MHz,IMG BXM-8-256,2x 2.2 GHz – Cortex-A78 | 6x 2 GHz – Cortex-A55
+/en/soc/mediatek-dimensity-900,Dimensity 900,671241,2400 MHz,Mali-G68 MP4,2x 2.4 GHz – Cortex-A78 | 6x 2 GHz – Cortex-A55
+/en/soc/samsung-exynos-9820,Exynos 9820,744321,2730 MHz,Mali-G76 MP12,2x 2.73 GHz – Mongoose M4 | 2x 2.31 GHz – Cortex-A75 | 4x 1.95 GHz – Cortex-A55
+/en/soc/hisilicon-kirin-980,Kirin 980,739763,2600 MHz,Mali-G76 MP10,2x 2.6 GHz – Cortex-A76 | 2x 1.92 GHz – Cortex-A76 | 4x 1.8 GHz – Cortex-A55
+/en/soc/qualcomm-snapdragon-4-gen-5,Snapdragon 4 Gen 5,652054,2400 MHz,-,2x 2.4 GHz – Cortex-A78 | 6x 2 GHz – Cortex-A55
+/en/soc/hisilicon-kirin-8000a,Kirin 8000A,682743,2200 MHz,-,3x 2.2 GHz – Cortex-A77 | 3x 1.84 GHz – Cortex-A55
+/en/soc/qualcomm-snapdragon-6s-gen-3,Snapdragon 6s Gen 3,623235,2300 MHz,Adreno 619,2x 2.3 GHz – Cortex-A78 | 6x 2 GHz – Cortex-A55
+/en/soc/mediatek-dimensity-7025,Dimensity 7025,557820,2500 MHz,IMG BXM-8-256,2x 2.5 GHz – Cortex-A78 | 6x 2 GHz – Cortex-A55
+/en/soc/mediatek-dimensity-7020,Dimensity 7020,639509,2200 MHz,IMG BXM-8-256,2x 2.2 GHz – Cortex-A78 | 6x 2 GHz – Cortex-A55
+/en/soc/qualcomm-snapdragon-4-gen-2,Snapdragon 4 Gen 2,572954,2200 MHz,Adreno 613,2x 2.2 GHz – Cortex-A78 | 6x 2 GHz – Cortex-A55
+/en/soc/unisoc-t9100,Unisoc T9100,701417,2700 MHz,Mali-G57 MP4,1x 2.7 GHz – Cortex-A76 | 3x 2.3 GHz – Cortex-A76 | 4x 2.1 GHz – Cortex-A55
+/en/soc/unisoc-t820,Unisoc T820,757199,2700 MHz,Mali-G57 MP4,1x 2.7 GHz – Cortex-A76 | 3x 2.3 GHz – Cortex-A76 | 4x 2.1 GHz – Cortex-A55
+/en/soc/qualcomm-snapdragon-695,Snapdragon 695,592489,2200 MHz,Adreno 619,2x 2.2 GHz – Kryo 660 Gold (Cortex-A78) | 6x 1.8 GHz – Kryo 660 Silver (Cortex-A55)
+/en/soc/mediatek-dimensity-820,Dimensity 820,609659,2600 MHz,Mali-G57 MP5,4x 2.6 GHz – Cortex-A76 | 4x 2 GHz – Cortex-A55
+/en/soc/hisilicon-kirin-820,Kirin 820,602614,2360 MHz,Mali-G57 MP6,1x 2.36 GHz – Cortex-A76 | 3x 2.22 GHz – Cortex-A76 | 4x 1.84 GHz – Cortex-A55
+/en/soc/unisoc-t8300,Unisoc T8300,639225,2200 MHz,Mali-G57 MP2,2x 2.2 GHz – Cortex-A78 | 6x 2 GHz – Cortex-A55
+/en/soc/mediatek-dimensity-6400,Dimensity 6400,550018,2500 MHz,Mali-G57 MP2,2x 2.5 GHz – Cortex-A76 | 6x 2 GHz – Cortex-A55
+/en/soc/samsung-exynos-1330,Exynos 1330,592392,2400 MHz,Mali-G68 MP2,2x 2.4 GHz – Cortex-A78 | 6x 2 GHz – Cortex-A55
+/en/soc/qualcomm-snapdragon-4-gen-1,Snapdragon 4 Gen 1,521686,2000 MHz,Adreno 619,2x 2 GHz – Cortex-A78 | 6x 1.8 GHz – Cortex-A55
+/en/soc/samsung-exynos-1280,Exynos 1280,605067,2400 MHz,Mali-G68 MP4,2x 2.4 GHz – Cortex-A78 | 6x 2 GHz – Cortex-A55
+/en/soc/qualcomm-snapdragon-765g,Snapdragon 765G,597153,2400 MHz,Adreno 620,1x 2.4 GHz – Kryo 475 Prime (Cortex-A76) | 1x 2.2 GHz – Kryo 475 Gold (Cortex-A76) | 6x 1.8 GHz – Kryo 475 Silver (Cortex-A55)
+/en/soc/hisilicon-kirin-810,Kirin 810,551097,2270 MHz,-,2x 2.27 GHz – Cortex-A76 | 6x 1.9 GHz – Cortex-A55
+/en/soc/mediatek-helio-g200,Helio G200,601391,2200 MHz,Mali-G57 MP2,2x 2.2 GHz – Cortex-A76 | 6x 2 GHz – Cortex-A55
+/en/soc/mediatek-helio-g100,Helio G100,570469,2200 MHz,Mali-G57 MP2,2x 2.2 GHz – Cortex-A76 | 6x 2 GHz – Cortex-A55
+/en/soc/qualcomm-snapdragon-4s-gen-2,Snapdragon 4s Gen 2,506757,2000 MHz,Adreno 611,2x 2 GHz – Cortex-A78 | 6x 1.8 GHz – Cortex-A55
+/en/soc/unisoc-t760,Unisoc T760,626381,2200 MHz,Mali-G57 MP4,4x 2.2 GHz – Cortex-A76 | 4x 2 GHz – Cortex-A55
+/en/soc/mediatek-dimensity-6300,Dimensity 6300,532738,2400 MHz,Mali-G57 MP2,2x 2.4 GHz – Cortex-A76 | 6x 2 GHz – Cortex-A55
+/en/soc/mediatek-dimensity-6100-plus,Dimensity 6100 Plus,513180,2200 MHz,Mali-G57 MP2,2x 2.2 GHz – Cortex-A76 | 6x 2 GHz – Cortex-A55
+/en/soc/mediatek-dimensity-6080,Dimensity 6080,581315,2400 MHz,Mali-G57 MP2,2x 2.4 GHz – Cortex-A76 | 6x 2 GHz – Cortex-A55
+/en/soc/mediatek-dimensity-6020,Dimensity 6020,527185,2200 MHz,Mali-G57 MP2,2x 2.2 GHz – Cortex-A76 | 6x 2 GHz – Cortex-A55
+/en/soc/mediatek-helio-g99,Helio G99,547830,2200 MHz,Mali-G57 MP2,2x 2.2 GHz – Cortex-A76 | 6x 2 GHz – Cortex-A55
+/en/soc/mediatek-dimensity-810,Dimensity 810,569913,2400 MHz,Mali-G57 MP2,2x 2.4 GHz – Cortex-A76 | 6x 2 GHz – Cortex-A55
+/en/soc/qualcomm-snapdragon-750g,Snapdragon 750G,525163,2200 MHz,Adreno 619,2x 2.2 GHz – Kryo 570 Gold (Cortex-A77) | 6x 1.8 GHz – Kryo 570 Silver (Cortex-A55)
+/en/soc/qualcomm-snapdragon-732g,Snapdragon 732G,517306,2300 MHz,Adreno 618,2x 2.3 GHz – Kryo 470 Gold (Cortex-A76) | 6x 1.8 GHz – Kryo 470 Silver (Cortex-A55)
+/en/soc/mediatek-dimensity-800u,Dimensity 800U,551706,2400 MHz,Mali-G57 MP3,2x 2.4 GHz – Cortex-A76 | 6x 2 GHz – Cortex-A55
+/en/soc/mediatek-dimensity-800,Dimensity 800,612841,2000 MHz,Mali-G57 MP4,4x 2 GHz – Cortex-A76 | 4x 2 GHz – Cortex-A55
+/en/soc/samsung-exynos-980,Exynos 980,603944,2200 MHz,Mali-G76 MP5,2x 2.2 GHz – Cortex-A77 | 6x 1.8 GHz – Cortex-A55
+/en/soc/qualcomm-snapdragon-480-plus,Snapdragon 480 Plus,477542,2200 MHz,Adreno 619,2x 2.2 GHz – Kryo 460 Gold (Cortex-A76) | 6x 1.8 GHz – Kryo 460 Silver (Cortex-A55)
+/en/soc/mediatek-dimensity-700,Dimensity 700,515647,2200 MHz,Mali-G57 MP2,2x 2.2 GHz – Cortex-A76 | 6x 2 GHz – Cortex-A55
+/en/soc/qualcomm-snapdragon-690,Snapdragon 690,499040,2000 MHz,Adreno 619,2x 2 GHz – Kryo 560 Gold (Cortex-A77) | 6x 1.7 GHz – Kryo 560 Silver (Cortex-A55)
+/en/soc/qualcomm-snapdragon-720g,Snapdragon 720G,514122,2300 MHz,Adreno 618,2x 2.3 GHz – Kryo 465 Gold (Cortex-A76) | 6x 1.8 GHz – Kryo 465 Silver (Cortex-A55)
+/en/soc/samsung-exynos-9810,Exynos 9810,583267,2900 MHz,Mali-G72 MP18,4x 2.9 GHz – Exynos M3 | 4x 1.9 GHz – Cortex-A55
+/en/soc/qualcomm-snapdragon-845,Snapdragon 845,570119,2800 MHz,Adreno 630,4x 2.8 GHz – Kryo 385 Gold (Cortex-A75) | 4x 1.8 GHz – Kryo 385 Silver (Cortex-A55)
+/en/soc/qualcomm-snapdragon-6s-4g-gen-2,Snapdragon 6s 4G Gen 2,522680,2900 MHz,Adreno 610,4x 2.9 GHz – Cortex-A73 | 4x 1.9 GHz – Cortex-A53
+/en/soc/qualcomm-snapdragon-480,Snapdragon 480,456551,2000 MHz,Adreno 619,2x 2 GHz – Kryo 460 Gold | 6x 1.8 GHz – Kryo 460 Silver
+/en/soc/mediatek-dimensity-720,Dimensity 720,452426,2000 MHz,Mali-G57 MP3,2x 2 GHz – Cortex-A76 | 6x 2 GHz – Cortex-A55
+/en/soc/qualcomm-snapdragon-730g,Snapdragon 730G,506661,2200 MHz,Adreno 618,2x 2.2 GHz – Kryo 470 Gold (Cortex-A76) | 6x 1.8 GHz – Kryo 470 Silver (Cortex-A55)
+/en/soc/qualcomm-snapdragon-730,Snapdragon 730,494401,2200 MHz,Adreno 618,2x 2.2 GHz – Kryo 470 Gold (Cortex-A76) | 6x 1.8 GHz – Kryo 470 Silver (Cortex-A55)
+/en/soc/qualcomm-snapdragon-685,Snapdragon 685,461236,2800 MHz,Adreno 610,4x 2.8 GHz – Cortex-A73 | 4x 1.9 GHz – Cortex-A53
+/en/soc/qualcomm-snapdragon-680,Snapdragon 680,415362,2400 MHz,Adreno 610,4x 2.4 GHz – Kryo 265 Gold (Cortex-A73) | 4x 1.9 GHz – Kryo 265 Silver (Cortex-A53)
+/en/soc/mediatek-helio-g96,Helio G96,493222,2050 MHz,Mali-G57 MP2,2x 2.05 GHz – Cortex-A76 | 6x 2 GHz – Cortex-A55
+/en/soc/qualcomm-snapdragon-678,Snapdragon 678,447401,2200 MHz,Adreno 612,2x 2.2 GHz – Kryo 460 Gold (Cortex-A76) | 6x 1.7 GHz – Kryo 460 Silver (Cortex-A55)
+/en/soc/mediatek-helio-g95,Helio G95,534895,2050 MHz,Mali-G76 MP4,2x 2.05 GHz – Cortex-A76 | 6x 2 GHz – Cortex-A55
+/en/soc/mediatek-helio-g90,Helio G90,469000,2050 MHz,Mali-G76 MP4,2x 2.05 GHz – Cortex-A76 | 6x 2 GHz – Cortex-A55
+/en/soc/mediatek-helio-g90t,Helio G90T,495638,2050 MHz,Mali-G76 MP4,2x 2.05 GHz – Cortex-A76 | 6x 2 GHz – Cortex-A55
+/en/soc/apple-a10-fusion,A10 Fusion,516981,2340 MHz,PowerVR GT7600,2x 2.34 GHz – Hurricane | 2x 1.05 GHz – Zephyr
+/en/soc/qualcomm-snapdragon-675,Snapdragon 675,412926,2000 MHz,Adreno 612,2x 2 GHz – Kryo 460 Gold (Cortex-A76) | 6x 1.7 GHz – Kryo 460 Silver (Cortex-A55)
+/en/soc/mediatek-helio-p95,Helio P95,380202,2200 MHz,PowerVR GM9446,2x 2.2 GHz – Cortex-A75 | 6x 2 GHz – Cortex-A55
+/en/soc/qualcomm-snapdragon-712,Snapdragon 712,434173,2300 MHz,Adreno 616,2x 2.3 GHz – Kryo 360 Gold (Cortex-A75) | 6x 1.7 GHz – Kryo 360 Silver (Cortex-A55)
+/en/soc/hisilicon-kirin-970,Kirin 970,470805,2360 MHz,Mali-G72 MP12,4x 2.36 GHz – Cortex A73 | 4x 1.84 GHz – Cortex A53
+/en/soc/qualcomm-snapdragon-835,Snapdragon 835,438016,2450 MHz,Adreno 540,4x 2.45 GHz – Kryo 280 (Cortex-A73) | 4x 1.9 GHz – Kryo 280 (Cortex-A53)
+/en/soc/unisoc-tiger-t620,Tiger T620,443956,2200 MHz,Mali-G57 MP1,2x 2.2 GHz – Cortex-A75 | 6x 1.8 GHz – Cortex-A55
+/en/soc/mediatek-helio-g91,Helio G91,354158,2000 MHz,Mali-G52 MP2,2x 2 GHz – Cortex-A75 | 6x 1.8 GHz – Cortex-A55
+/en/soc/qualcomm-snapdragon-710,Snapdragon 710,417439,2200 MHz,Adreno 616,2x 2.2 GHz – Kryo 360 Gold (Cortex-A75) | 6x 1.7 GHz – Kryo 360 Silver (Cortex-A55)
+/en/soc/mediatek-helio-g92-max,Helio G92 Max,370885,2000 MHz,Mali-G52 MP2,2x 2 GHz – Cortex-A75 | 6x 1.8 GHz – Cortex-A55
+/en/soc/unisoc-tiger-t615,Tiger T615,351752,1800 MHz,Mali-G57 MP1,2x 1.8 GHz – Cortex-A75 | 6x 1.6 GHz – Cortex-A55
+/en/soc/mediatek-helio-g81,Helio G81,357879,2000 MHz,Mali-G52 MP2,2x 2 GHz – Cortex-A75 | 6x 1.7 GHz – Cortex-A55
+/en/soc/unisoc-tiger-t612,Tiger T612,341088,1800 MHz,Mali-G57 MP1,2x 1.8 GHz – Cortex-A75 | 6x 1.8 GHz – Cortex-A55
+/en/soc/unisoc-tiger-t616,Tiger T616,388158,2000 MHz,Mali-G57 MP1,2x 2 GHz – Cortex-A75 | 6x 1.8 GHz – Cortex-A55
+/en/soc/mediatek-helio-g88,Helio G88,353817,2000 MHz,Mali-G52 MP2,2x 2 GHz – Cortex-A75 | 6x 1.8 GHz – Cortex-A55
+/en/soc/unisoc-tiger-t618,Tiger T618,364048,2000 MHz,Mali-G52 MP2,2x 2 GHz – Cortex-A75 | 6x 1.8 GHz – Cortex-A55
+/en/soc/mediatek-helio-g85,Helio G85,349222,2000 MHz,Mali-G52 MP2,2x 2 GHz – Cortex-A75 | 6x 1.8 GHz – Cortex-A55
+/en/soc/qualcomm-snapdragon-662,Snapdragon 662,320666,2000 MHz,Adreno 610,4x 2 GHz – Kryo 260 Gold (Cortex-A73) | 4x 1.8 GHz – Kryo 260 Silver (Cortex-A53)
+/en/soc/mediatek-helio-g80,Helio G80,310388,2000 MHz,Mali-G52 MP2,2x 2 GHz – Cortex-A75 | 6x 1.8 GHz – Cortex-A55
+/en/soc/mediatek-helio-g70,Helio G70,317084,2000 MHz,Mali-G52 MP2,2x 2 GHz – Cortex-A75 | 6x 1.7 GHz – Cortex-A55
+/en/soc/apple-a9,Apple A9,419670,1850 MHz,PowerVR GT7600,2x 1.85 GHz – Twister
+/en/soc/qualcomm-snapdragon-665,Snapdragon 665,323556,2000 MHz,Adreno 610,4x 2 GHz – Kryo 260 Gold (Cortex-A73) | 4x 1.8 GHz – Kryo 260 Silver (Cortex-A53)
+/en/soc/qualcomm-snapdragon-670,Snapdragon 670,322015,2000 MHz,Adreno 615,2x 2 GHz – Kryo 360 Gold (Cortex-A75) | 6x 1.7 GHz – Kryo 360 Silver (Cortex-A55)
+/en/soc/mediatek-helio-p90,Helio P90,388553,2200 MHz,PowerVR GM9446,2x 2.2 GHz – Cortex A75 | 6x 2 GHz – Cortex A55
+/en/soc/samsung-exynos-8895,Exynos 8895,447464,2314 MHz,Mali-G71 MP20,4x 2.314 GHz – Exynos M2 | 4x 1.69 GHz – Cortex-A53
+/en/soc/unisoc-t606,Unisoc T606,330006,1600 MHz,Mali-G57 MP1,2x 1.6 GHz – Cortex-A75 | 6x 1.6 GHz – Cortex-A55
+/en/soc/unisoc-tiger-t610,Tiger T610,320967,1820 MHz,Mali-G52 MP2,2x 1.82 GHz – Cortex-A75 | 6x 1.82 GHz – Cortex-A55
+/en/soc/unisoc-tiger-t700,Tiger T700,332816,1820 MHz,Mali-G52 MP2,2x 1.82 GHz – Cortex-A75 | 6x 1.82 GHz – Cortex-A55
+/en/soc/samsung-exynos-850,Exynos 850,231906,2000 MHz,Mali-G52 MP1,8x 2 GHz – Cortex-A55
+/en/soc/qualcomm-snapdragon-460,Snapdragon 460,251428,1800 MHz,Adreno 610,4x 1.8 GHz – Kryo 240 Gold | 4x 1.8 GHz – Kryo 240 Silver
+/en/soc/hisilicon-kirin-710f,Kirin 710F,323894,2200 MHz,Mali-G51 MP4,4x 2.2 GHz – Cortex-A73 | 4x 1.7 GHz – Cortex-A53
+/en/soc/mediatek-helio-p65,Helio P65,290447,2000 MHz,Mali-G52 MP2,2x 2 GHz – Cortex-A75 | 6x 1.7 GHz – Cortex-A55
+/en/soc/samsung-exynos-9611,Exynos 9611,355351,2300 MHz,Mali-G72 MP3,4x 2.3 GHz – Cortex-A73 | 4x 1.7 GHz – Cortex-A53
+/en/soc/hisilicon-kirin-710a,Kirin 710A,343622,2000 MHz,Mali-G51 MP4,4x 2 GHz – Cortex-A73 | 4x 1.7 GHz – Cortex-A53
+/en/soc/mediatek-helio-g35,Helio G35,200794,2300 MHz,PowerVR GE8320,4x 2.3 GHz – Cortex-A53 | 4x 1.8 GHz – Cortex-A53
+/en/soc/mediatek-helio-p70,Helio P70,303398,2100 MHz,Mali-G72 MP3,4x 2.1 GHz – Cortex-A73 | 4x 2 GHz – Cortex-A53
+/en/soc/hisilicon-kirin-710,Kirin 710,336905,2200 MHz,Mali-G51 MP4,4x 2.2 GHz – Cortex-A73 | 4x 1.7 GHz – Cortex-A53
+/en/soc/samsung-exynos-9610,Exynos 9610,352871,2300 MHz,Mali-G72 MP3,4x 2.3 GHz – Cortex-A73 | 4x 1.7 GHz – Cortex-A53
+/en/soc/mediatek-helio-g50,Helio G50,184328,2200 MHz,PowerVR GE8320,4x 2.2 GHz – Cortex-A53 | 4x 1.7 GHz – Cortex-A53
+/en/soc/mediatek-helio-g36,Helio G36,195539,2200 MHz,PowerVR GE8320,4x 2.2 GHz – Cortex-A53 | 4x 1.8 GHz – Cortex-A53
+/en/soc/mediatek-helio-g37,Helio G37,194025,2300 MHz,PowerVR GE8320,4x 2.3 GHz – Cortex-A53 | 4x 1.8 GHz – Cortex-A53
+/en/soc/mediatek-helio-p60,Helio P60,232802,2000 MHz,Mali-G72 MP3,4x 2 GHz – Cortex-A73 | 4x 2 GHz – Cortex-A53
+/en/soc/qualcomm-snapdragon-821,Snapdragon 821,312361,2342 MHz,Adreno 530,2x 2.342 GHz – Kryo | 2x 1.6 GHz – Kryo
+/en/soc/qualcomm-snapdragon-660,Snapdragon 660,347995,2200 MHz,Adreno 512,4x 2.2 GHz – Kryo 260 Gold (Cortex-A73) | 4x 1.84 GHz – Kryo 260 Silver (Cortex-A53)
+/en/soc/mediatek-helio-p35,Helio P35,199111,2300 MHz,PowerVR GE8320,4x 2.3 GHz – Cortex-A53 | 4x 1.8 GHz – Cortex-A53
+/en/soc/hisilicon-kirin-960,Kirin 960,366515,2360 MHz,Mali-G71 MP8,4x 2.36 GHz – Cortex-A73 | 4x 1.84 GHz – Cortex-A53
+/en/soc/samsung-exynos-8890,Exynos 8890,418077,2300 MHz,Mali-T880 MP12,4x 2.3 GHz – Mongoose M1 | 4x 1.6 GHz – Cortex-A53
+/en/soc/mediatek-helio-g25,Helio G25,163723,2000 MHz,PowerVR GE8320,4x 2 GHz – Cortex-A53 | 4x 1.5 GHz – Cortex-A53
+/en/soc/qualcomm-snapdragon-439,Snapdragon 439,193115,2000 MHz,Adreno 505,4x 2 GHz – Cortex-A53 | 4x 1.45 GHz – Cortex-A53
+/en/soc/mediatek-helio-p22,Helio P22,156818,2000 MHz,PowerVR GE8320,4x 2 GHz – Cortex-A53 | 4x 1.5 GHz – Cortex-A53
+/en/soc/qualcomm-snapdragon-820,Snapdragon 820,333877,2150 MHz,Adreno 530,2x 2.15 GHz – Kryo | 2x 1.593 GHz – Kryo
+/en/soc/samsung-exynos-7904,Exynos 7904,241600,1800 MHz,Mali-G71 MP2,2x 1.8 GHz – Cortex-A73 | 6x 1.6 GHz – Cortex-A53
+/en/soc/qualcomm-snapdragon-636,Snapdragon 636,282713,1800 MHz,Adreno 509,4x 1.8 GHz – Kryo 260 Gold (Cortex-A73) | 4x 1.6 GHz – Kryo 260 Silver (Cortex-A53)
+/en/soc/qualcomm-snapdragon-632,Snapdragon 632,243691,1800 MHz,Adreno 506,4x 1.8 GHz – Kryo 250 Gold (Cortex-A73 | 4x 1.8 GHz – Kryo 250 Silver (Cortex-A53)
+/en/soc/samsung-exynos-7884b,Exynos 7884B,205752,1560 MHz,Mali-G71 MP2,2x 1.6 GHz – Cortex-A73 | 6x 1.35 GHz – Cortex-A53
+/en/soc/samsung-exynos-7885,Exynos 7885,268800,2200 MHz,Mali-G71 MP2,2x 2.2 GHz – Cortex-A73 | 6x 1.6 GHz – Cortex-A53
+/en/soc/qualcomm-snapdragon-630,Snapdragon 630,215323,2200 MHz,Adreno 508,4x 2.2 GHz – Cortex-A53 | 4x 1.8 GHz – Cortex-A53
+/en/soc/qualcomm-snapdragon-450,Snapdragon 450,176718,1800 MHz,Adreno 506,8x 1.8 GHz – Cortex-A53
+/en/soc/mediatek-helio-a22,Helio A22,155362,2000 MHz,PowerVR GE8300,4x 2 GHz – Cortex-A53
+/en/soc/qualcomm-snapdragon-625,Snapdragon 625,218879,2000 MHz,Adreno 506,8x 2 GHz – Cortex-A53
+/en/soc/samsung-exynos-7870,Exynos 7870,192269,1600 MHz,Mali-T830 MP1,8x 1.6 GHz – Cortex-A53
+/en/soc/unisoc-sc9863a,Unisoc SC9863A,153667,1600 MHz,PowerVR GE8322,4x 1.6 GHz – Cortex-A55 | 4x 1.2 GHz – Cortex-A55
+/en/soc/qualcomm-snapdragon-430,Snapdragon 430,180440,1400 MHz,Adreno 505,8x 1.4 GHz – Cortex-A53
+/en/soc/qualcomm-snapdragon-801,Snapdragon 801,159133,2500 MHz,Adreno 330,4x 2.5 GHz – Krait
+/en/soc/qualcomm-snapdragon-435,Snapdragon 435,150628,1400 MHz,Adreno 505,8x 1.4 GHz – Cortex-A53
+/en/soc/qualcomm-snapdragon-425,Snapdragon 425,180934,1400 MHz,Adreno 308,4x 1.4 GHz – Cortex-A53
+/en/soc/mediatek-mt6737,MediaTek MT6737,73398,1300 MHz,Mali-T720 MP2,4x 1.3 GHz – Cortex-A53
