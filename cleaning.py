@@ -2,8 +2,6 @@ import pandas as pd
 import numpy as np
 import re
 
-#----- CLEANING --------------
-
 def clean_phone_name(raw_name):
     if pd.isna(raw_name):
         return ""
@@ -206,7 +204,6 @@ def advanced_clean_os(text):
 
 
 def clean_battery(raw_value):
-    # Bước 0: NaN → None
     if pd.isna(raw_value):
         return None
 
@@ -270,8 +267,6 @@ def clean_sim_options(text):
             max_mini = 1
 
     return max_nano, max_esim, max_micro, max_mini
-
-#----------- EXTRACTING --------------------
 
 def get_brand(text):    
     brand = text.strip().split()[0]
